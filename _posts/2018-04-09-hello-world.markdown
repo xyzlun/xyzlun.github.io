@@ -3,7 +3,7 @@ layout: post
 title: "被你看到我了！"
 img: 20180409111540.jpg 
 date: 2018-04-09
-description: 不写技术博客的码农不是好码农，so... 
+description: 不写技术博客的码农不是好码农 
 tag: [first commit, 杂记]
 ---
 Hello World!
