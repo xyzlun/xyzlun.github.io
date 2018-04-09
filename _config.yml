@@ -1,0 +1,48 @@
+logo: LUNATIC # add logo name
+title: LUNATIC-SPACE
+description: > # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+permalink: ':title/'
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "xyzlun.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+
+# Banner settings
+banner:  91224-106.jpg # add banner video. Add your video file to the folder video
+banner-title: LUNATIC-BLOG # add banner title
+banner-desc: -Hello World- # add banner description
+
+# Author settings
+author-pic: curry.jpg # your photo
+author-name: xyzlun # your name
+about-author: null # about author
+email: xyzlun@163.com # your email
+website: #https://xyzlun.github.io # you website
+
+# Social link
+github_url: 
+weixin_url: 
+weibo_url: 
+
+# Disqus
+discus_identifier: #mr-brown # add your discus identifier
+
+# # Newsletter
+# mailchimp: # add your MailChimp form identifier. For example - blogenjoyfreedom.us16.list-manage.com/subscribe/post?u=cd56155d76ddeeb4c0bc4d080&amp;id=7a526cd13e
+
+# Tracker
+analytics:
+
+# Paginate
+paginate: 12
+paginate_path: /page:num/
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+
+include: [_pages]
+exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]
