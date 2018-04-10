@@ -10,8 +10,15 @@ layout: main
       {% endif %}
     </a>
     <div class="chapter_inner">
-      <p class="chapter_number">{{post.date | date: '%Y, %b %d'}}</p>
-      <h3 class="chapter_title">{{post.title}}</h3>
+      <p class="chapter_number">{{post.date | date: '%Y, %b %d'}}
+        <w> &#8195 评论： </w>
+        <span id = "url::{{post.url | prepend: site.baseurl}}" class = "cy_cmt_count" ></span>
+        <script id="cy_cmt_num" src="https://changyan.sohu.com/upload/plugins/plugins.list.count.js?clientId=cytyyGQ47">
+        </script>
+
+      </p>
+      <h3 class="chapter_title">{{post.title}} </h3>
+
     </div>
   </div>
 {% endfor %}
