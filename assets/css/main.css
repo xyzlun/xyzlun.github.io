@@ -4417,7 +4417,7 @@ cite {
 }
 
 .recent_box {
-  background-color: #ffffff;
+  background-color:  rgba(255, 255, 255, 0);
   padding: 2rem 0;
   margin-bottom: 1.5rem;
 }
@@ -4426,6 +4426,7 @@ cite {
   font-size: 1.5rem;
   text-align: center;
   margin: 0 0 1.75rem;
+  color: white;
 }
 
 .recent_box .recent_list .recent_item {
@@ -4450,18 +4451,6 @@ cite {
   left: 2.5%;
   color: white;
   font-size: 1rem;
-}
-
-.recent_box .recent_list .recent_item_post_1 {
-  background-image: url(../images/canyon.jpg);
-}
-
-.recent_box .recent_list .recent_item_post_2 {
-  background-image: url(../images/malaysia.jpg);
-}
-
-.recent_box .recent_list .recent_item_post_3 {
-  background-image: url(../images/sweden.jpg);
 }
 
 #tags {
