@@ -1,4 +1,7 @@
---- layout: default --- {% include header.html %}
+--- 
+layout: default 
+--- 
+{% include header.html %}
 
 <main class="post_content">
     <article class="post">
@@ -45,7 +48,14 @@
         </div>
     </section>
     <!-- End Section Author -->
-
+    <div id="SOHUCS" ></div>
+    <script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js" ></script>
+    <script type="text/javascript">
+    window.changyan.api.config({
+    appid: 'cytyyGQ47',
+    conf: 'prod_606f83a48fa389c8d4c03cb95efe7bbd'
+    });
+    </script>
     <section class="recent_box">
         <div class="post_wrapper">
             <h2 class="recent_title">Recent post</h2>
