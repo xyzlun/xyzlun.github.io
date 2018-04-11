@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Jekyll 搭建个人博客！"
+title: "Jekyll 搭建个人博客"
 img: 20180411-5.jpg 
 date: 2018-04-11
 description: Jekyll 搭建个人博客 
