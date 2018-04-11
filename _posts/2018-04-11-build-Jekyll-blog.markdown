@@ -90,7 +90,7 @@ ruby安装完成后（记得添加入环境变量）需要安装[RubyGem][4]，g
 要启用Github Pages，首先需要创建一个repo，名称为{你的用户名}.github.io，在以前的版本中需要在后台settings中手动开启Github Pages功能，现在系统检测到{你的用户名}.github.io会自动开启。   
 如果你创建的仓库为空时（比如不添加README），会提示无法启用，这个不着急，等fork模板或上传你下载的theme后，repo中有了内容就会自动开启。  
 <div align="center">
-    <img  alt="Github Pages" src="/assets/img/in_post/2018-04-11-build-Jekyll-blog-2.png"/>
+    <img  width="70%" height="70%" alt="Github Pages" src="/assets/img/in_post/2018-04-11-build-Jekyll-blog-2.png"/>
 </div>   
 后面的工作就是去找一下你喜欢的theme，fork下来，或者下载下来，把repo clone到本地，编辑器用什么都行，前端神器[WebStorm](https://www.jetbrains.com/webstorm/)或者[VS code](https://code.visualstudio.com/)都可以，都有VSC插件，颜值也都够。  
 
