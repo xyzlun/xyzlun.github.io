@@ -63,23 +63,23 @@ jekyll3.0之前，有一个语法高亮插件：Pygments，它基于python的，
 ruby安装完成后（记得添加入环境变量）需要安装[RubyGem][4]，gem是一个ruby的包管理系统，可以用gem很方便的在本地安装ruby应用，类似于python中的pip。下载安装包后解压到你本地任意位置。   
 
 安装方法，在命令行下  
-```cd {你解压的目录}```  
-```ruby setup.rb``` 
-安装完成后命令行下输入`$gem source -l` 查看当前添加gem源，  
+<code>cd {你解压的目录}</code>  
+<code>ruby setup.rb</code>   
+安装完成后命令行下输入<code>gem source -l</code> 查看当前添加gem源，  
 然后通过  
-`gem sources -r https://rubygems.org/` 和 `gem sources -r https://ruby.taobao.org/`  
+<code>gem sources -r https://rubygems.org/</code> 和 <code>gem sources -r https://ruby.taobao.org/</code>    
 移除官方源和淘宝源（最新的版本已经不默认添加淘宝源了），  
 再使用命令  
-`gem sources -a http://gems.ruby-china.org`添加ruby china源。   
+<code>gem sources -a http://gems.ruby-china.org</code>添加ruby china源。   
 注意这里使用的是http链接，如果使用https链接会遇到https请求失败的问题，需要[下载证书][5],  
 指定环境变量  
-`set SSL_CERT_FILE={你自己安装的目录}\cacert.pem`
+<code>set SSL_CERT_FILE={你自己安装的目录}\cacert.pem</code>
 完成后安装jekyll：  
-`gem install jekyll`    
-`gem install jekyll-paginate`  
-安装完成后`jekyll -v`查看版本信息，正确显示就恭喜本地环境配置完成。   
-本地调试可以通过`jekyll serve`命令在4000端口进行调试。
-当选用不同的jekyll主题时，可能会要求安装其他jekyll包，同样通过`gem jekyll-XXX`安装即可。
+<code>gem install jekyll</code>  
+<code>gem install jekyll-paginate</code>    
+安装完成后<code>jekyll -v</code>查看版本信息，正确显示就恭喜本地环境配置完成。   
+本地调试可以通过<code>jekyll serve</code>命令在4000端口进行调试。
+当选用不同的jekyll主题时，可能会要求安装其他jekyll包，同样通过<code>gem jekyll-XXX</code>安装即可。
 
 ## 2 创建Github仓库
 --------

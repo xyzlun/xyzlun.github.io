@@ -3890,7 +3890,26 @@ input[type=email], input[type=text], input[type=tel], textarea {
           border-radius: 0.3rem;
   outline: none;
 }
-
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+code {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #f0f0f0;
+  background-color: rgb(98, 148, 235);
+  border-radius: 4px;
+}
 cite {
   color: #949494;
 }
