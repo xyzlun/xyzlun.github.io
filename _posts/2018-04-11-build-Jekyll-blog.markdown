@@ -10,7 +10,7 @@ tag: [Blog, 技术分享]
 >  分享是程序员的美德
 
 ## 起由
-写博客的初衷是记录工作中遇到的问题和解决方案，同时满足自己装逼的刚需，txtx。为了让自己更有归属感，期初是想完全自己完成前后端的搭建，但是理想的丰满总是被现实骨感打败，工作时间的不允许，加之对于一个喜欢使用各种新奇轮子的程序员，轻便，逼格，可玩性高是必备的三要素。遍览市面上的技术博客均无法满足装逼的要求，这个念头一直搁置了下来。
+写博客的初衷是记录工作中遇到的问题和解决方案，同时满足自己装逼的刚需，txtx。为了让自己更有归属感，起初是想完全自己完成前后端的搭建，但是理想的丰满总是被现实骨感打败，工作时间的不允许，加之对于一个喜欢使用各种新奇轮子的程序员，轻便，逼格，可玩性高是必备的三要素。遍览市面上的技术博客均无法满足装逼的要求，这个念头一直搁置了下来。
 
 要不说 念念不忘，必有回响 呢。感谢[@蹉跎][1]同学的安利，我发现了*hexo*和*jekyll*这类博客框架，其轻便程度和theme风格都能让人隔着屏幕嗅到大（zhuang）神（bi）的气息。随即，惊喜之余用颤抖的双手在几小时搭建好了第一个个人博客。
 这篇先讲讲如何搭建属（wan）于（quan）自（mian）己（fei）的Jekyll个人博客（当然hexo也很好，等有空再介绍，大同小异。）
@@ -90,7 +90,7 @@ ruby安装完成后（记得添加入环境变量）需要安装[RubyGem][4]，g
 要启用Github Pages，首先需要创建一个repo，名称为{你的用户名}.github.io，在以前的版本中需要在后台settings中手动开启Github Pages功能，现在系统检测到{你的用户名}.github.io会自动开启。   
 如果你创建的仓库为空时（比如不添加README），会提示无法启用，这个不着急，等fork模板或上传你下载的theme后，repo中有了内容就会自动开启。  
 <div align="center">
-    <img  alt="Github Pages" src="/assets/img/in_post/2018-04-11-build-Jekyll-blog-2.png"/>
+    <img  width="70%" height="70%" alt="Github Pages" src="/assets/img/in_post/2018-04-11-build-Jekyll-blog-2.png"/>
 </div>   
 后面的工作就是去找一下你喜欢的theme，fork下来，或者下载下来，把repo clone到本地，编辑器用什么都行，前端神器[WebStorm](https://www.jetbrains.com/webstorm/)或者[VS code](https://code.visualstudio.com/)都可以，都有VSC插件，颜值也都够。  
 
