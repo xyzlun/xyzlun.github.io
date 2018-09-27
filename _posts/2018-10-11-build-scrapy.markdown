@@ -16,7 +16,6 @@ tag: [Blog, 技术分享, 工作日志]
 然后activate命令激活虚拟环境。
 首先就是一波pip install~
 现在scrapy中已经包含了zope.interface、pyOpenSSL、twisted、lxml
-
 之后就是：<code>scrapy startproject 4C</code> 出发了小瓜皮们！
 <div align="center">
     <img  alt="error" src="/assets/img/in_post/2018-10-11-build-scrapy-1.png"/>
@@ -52,7 +51,7 @@ IDE的选择有很多，我是习惯用Pycharm了，所以用Pycharm打开工程
 ------
 相信大家猜到了，这个项目一开始肯定是跑不起来的。运行后提示报错
 <div align="center">
-    <img  width="70%" height="70%" alt="error_info" src="/assets/img/in_post/2018-10-11-build-scrapy-6.png"/>
+    <img  width="85%"  alt="error_info" src="/assets/img/in_post/2018-10-11-build-scrapy-6.png"/>
 </div>
 416状态码的官方解释是：416 Requested Range Not Satisfiable 服务器不能满足客户在请求中指定的Range头。
 理解下来是我们的爬虫向服务器发送的request中的header不满足要求，服务器不认为它是一个浏览器。因此解决方案就有两个：
@@ -65,12 +64,46 @@ IDE的选择有很多，我是习惯用Pycharm了，所以用Pycharm打开工程
     <img  width="90%" height="90%" alt="middleware" src="/assets/img/in_post/2018-10-11-build-scrapy-7.png"/>
 </div>
 
+```python
+DOWNLOADER_MIDDLEWARES = {
+   'scrapy4C.middlewares.Scrapy4CDownloaderMiddleware': 543,
+    'scrapy4C.middlewares.UserAgentMiddleware': 401,
+}
+```
+
 首先在setting.py中注册中间件的名称，然后在项目下middlewares.py中添加代码。咱们爬的论坛是会检查UA的，那我们就带上好咯
 <div align="center">
     <img  width="70%" height="70%" alt="middleware" src="/assets/img/in_post/2018-10-11-build-scrapy-8.png"/>
 </div>
 
+```python
+import random
+agents = [
+    "Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/532.5 (KHTML, like Gecko) 
+Chrome/4.0.249.0 Safari/532.5",
+    "Mozilla/5.0 (Windows; U; Windows NT 5.2; en-US) AppleWebKit/532.9 (KHTML, like Gecko) 
+Chrome/5.0.310.0 Safari/532.9",
+    "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/534.7 (KHTML, like Gecko) 
+Chrome/7.0.514.0 Safari/534.7",
+    "Mozilla/5.0 (Windows; U; Windows NT 6.0; en-US) AppleWebKit/534.14 (KHTML, like Gecko) 
+Chrome/9.0.601.0 Safari/534.14",
+    "Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.14 (KHTML, like Gecko) 
+Chrome/10.0.601.0 Safari/534.14",
+    "Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.20 (KHTML, like Gecko) 
+Chrome/11.0.672.2 Safari/534.20",
+    "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/534.27 (KHTML, like Gecko) 
+Chrome/12.0.712.0 Safari/534.27",
+    "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.1 (KHTML, like Gecko) 
+Chrome/13.0.782.24 Safari/535.1",
+]
 
-> ###### *分享确实是一件很难的事情，坚持下去更加不容易，与君共勉吧!*
+class UserAgentMiddleware(object):
+    def process_request(self, request, spider):
+    agent = random.choice(agents)
+    request.headers["User-Agent"] = agent
+```
+
+
+
 
 [1]: https://www.lfd.uci.edu/~gohlke/pythonlibs/
