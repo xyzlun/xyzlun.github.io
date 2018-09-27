@@ -59,9 +59,10 @@ IDE的选择有很多，我是习惯用Pycharm了，所以用Pycharm打开工程
 
 1. 在request上戴上浏览器的header；
 2. 使用代理。
+
 我们选择使用Middleware中间件，通过Middleware我们可以对请求信息作出一些修改，比如常用的设置UA、代理、登录信息等等都可以通过Middleware来配置。
 <div align="center">
-    <img  width="70%" height="70%" alt="middleware" src="/assets/img/in_post/2018-10-11-build-scrapy-7.png"/>
+    <img  width="90%" height="90%" alt="middleware" src="/assets/img/in_post/2018-10-11-build-scrapy-7.png"/>
 </div>
 
 首先在setting.py中注册中间件的名称，然后在项目下middlewares.py中添加代码。咱们爬的论坛是会检查UA的，那我们就带上好咯
