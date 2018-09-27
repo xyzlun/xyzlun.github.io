@@ -4,7 +4,7 @@ title: "技术化装修 装友会论坛爬虫"
 img: 20180927.jpg
 date: 2018-10-11
 description: 技术化装修 装友会论坛爬虫 
-tag: [Blog, 技术分享, 工作日志]
+tag: [Blog, 技术分享]
 ---
 
 ## 前言
