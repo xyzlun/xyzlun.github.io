@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "技术化装修--装友会论坛爬虫 一（尽量有二）"
-img:  malaysia.jpg
+title: "技术化装修 装友会论坛爬虫"
+img: malaysia.jpg
 date: 2018-10-11
-description: 技术化装修--装友会论坛爬虫 
-tag: [Blog, 技术分享]
+description: 技术化装修 装友会论坛爬虫 
+tag: [Blog, 技术分享,工作日志]
 ---
+
 ## 前言
 > 最近在装修自己的房子。是的，我膨胀了，终于要在成都安下自己的家了~一直以来选择装修公司、找第三方监理和主材选择，以及各种装修经验都是泡在第四城的装友会来学习的。某天和老婆在讨论浴室柜选哪家的时候，突然想知道一下装友们都是怎么选的，结果发现论坛并没有内容搜索，就是这么old school~作为一个菜鸟pythoner，自然想到爬一爬帖子咯，也是刚好闲的没事（可能自己是个假程序员）。
 
@@ -67,7 +68,6 @@ IDE的选择有很多，我是习惯用Pycharm了，所以用Pycharm打开工程
 DOWNLOADER_MIDDLEWARES = {
    'scrapy4C.middlewares.Scrapy4CDownloaderMiddleware': 543,
     "scrapy4C.middlewares.UserAgentMiddleware": 401,
-    # "scrapy4C.middleware.ProxyMiddleware": 402,
 }
 ```
 
@@ -95,7 +95,3 @@ class UserAgentMiddleware(object):
 > ###### *分享确实是一件很难的事情，坚持下去更加不容易，与君共勉吧!*
 
 [1]: https://www.lfd.uci.edu/~gohlke/pythonlibs/
-
-
-
-
