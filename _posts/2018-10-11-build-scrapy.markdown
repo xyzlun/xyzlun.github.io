@@ -28,7 +28,7 @@ IDE的选择有很多，我是习惯用Pycharm了，所以用Pycharm打开工程
 </div>
  Pycharm是没有办法直接调试scrapy的，所以需要我们自己做一些配置。首先在spider目录下新建一个py文件，在这个阶段我们需要在这个文件中写一些基本的逻辑。
 <div align="center">
-    <img  width="85%" height="85%" alt="spider" src="/assets/img/in_post/2018-10-11-build-scrapy-3.png"/>
+    <img  width="90%" height="90%" alt="spider" src="/assets/img/in_post/2018-10-11-build-scrapy-3.png"/>
 </div>
 其中start_request是我们需要爬取的url。进行多页爬行需要返回一个列表，或者使用生成器。我这里暂时爬论坛的前两页。parse()方法将调用一个方法处理每一个请求所下载的响应，我们首先把他们打印出来，后面再进行复杂的操作。
 
@@ -123,6 +123,6 @@ class UserAgentMiddleware(object):
     <img  alt="html" src="/assets/img/in_post/2018-10-11-build-scrapy-10.png"/>
 </div>
 
-> ##### *TO BE CONTINUE*
+> ##### *TO BE CONTINUE...*
 
 [1]: https://www.lfd.uci.edu/~gohlke/pythonlibs/
