@@ -4,7 +4,7 @@ title: "技术化装修 装友会论坛爬虫"
 img: malaysia.jpg
 date: 2018-10-11
 description: 技术化装修 装友会论坛爬虫 
-tag: [Blog, 技术分享,工作日志]
+tag: [Blog, 技术分享, 工作日志]
 ---
 
 ## 前言
@@ -60,33 +60,14 @@ IDE的选择有很多，我是习惯用Pycharm了，所以用Pycharm打开工程
 1. 在request上戴上浏览器的header；
 2. 使用代理。
 我们选择使用Middleware中间件，通过Middleware我们可以对请求信息作出一些修改，比如常用的设置UA、代理、登录信息等等都可以通过Middleware来配置。
-
-```python
-DOWNLOADER_MIDDLEWARES = {
-   'scrapy4C.middlewares.Scrapy4CDownloaderMiddleware': 543,
-    "scrapy4C.middlewares.UserAgentMiddleware": 401,
-}
-```
+<div align="center">
+    <img  width="70%" height="70%" alt="middleware" src="/assets/img/in_post/2018-10-11-build-scrapy-7.png"/>
+</div>
 
 首先在setting.py中注册中间件的名称，然后在项目下middlewares.py中添加代码。咱们爬的论坛是会检查UA的，那我们就带上好咯
-
-
-import random
-agents = [
-"Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/532.5 (KHTML, like Gecko) Chrome/4.0.249.0 Safari/532.5",
-"Mozilla/5.0 (Windows; U; Windows NT 5.2; en-US) AppleWebKit/532.9 (KHTML, like Gecko) Chrome/5.0.310.0 Safari/532.9",
-"Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/534.7 (KHTML, like Gecko) Chrome/7.0.514.0 Safari/534.7",
-"Mozilla/5.0 (Windows; U; Windows NT 6.0; en-US) AppleWebKit/534.14 (KHTML, like Gecko) Chrome/9.0.601.0 Safari/534.14",
-"Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.14 (KHTML, like Gecko) Chrome/10.0.601.0 Safari/534.14",
-"Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.20 (KHTML, like Gecko) Chrome/11.0.672.2 Safari/534.20",
-"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/534.27 (KHTML, like Gecko) Chrome/12.0.712.0 Safari/534.27",
-"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/13.0.782.24 Safari/535.1",
-]
-
-class UserAgentMiddleware(object):
-    def process_request(self, request, spider):
-    agent = random.choice(agents)
-    request.headers["User-Agent"] = agent
+<div align="center">
+    <img  width="70%" height="70%" alt="middleware" src="/assets/img/in_post/2018-10-11-build-scrapy-8.png"/>
+</div>
 
 
 > ###### *分享确实是一件很难的事情，坚持下去更加不容易，与君共勉吧!*

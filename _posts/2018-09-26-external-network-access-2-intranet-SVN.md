@@ -4,7 +4,7 @@ title: "通过NAT搭建外网可访问的SVN"
 img: 20180926.jpg 
 date: 2018-09-26
 description: 通过NAT搭建外网可访问的SVN 
-tag: [Blog, 技术分享,工作日志]
+tag: [Blog, 技术分享, 工作日志]
 ---
 
 ## 起由
