@@ -52,7 +52,7 @@ IDE的选择有很多，我是习惯用Pycharm了，所以用Pycharm打开工程
 416状态码的官方解释是：416 Requested Range Not Satisfiable 服务器不能满足客户在请求中指定的Range头。
 理解下来是我们的爬虫向服务器发送的request中的header不满足要求，服务器不认为它是一个浏览器。因此解决方案就有两个：
 
-1. 在request上戴上浏览器的header；
+1. 在request上带上浏览器的header；
 2. 使用代理。
 
 我们选择使用Middleware中间件，通过Middleware我们可以对请求信息作出一些修改，比如常用的设置UA、代理、登录信息等等都可以通过Middleware来配置。
@@ -104,7 +104,7 @@ class UserAgentMiddleware(object):
     def parse(self, response):
         style_dic = {}
         selector = Selector(response)
-        # 在此，xpath会将所有class=topic的标签提取出来，当然这是个list
+        # 在此，xpath会将所有id包含normalthread_的标签提取出来，当然这是个list
         # 这个list里的每一个元素都是我们要找的html标签
         content_list = selector.xpath("//tbody[contains(@id, 'normalthread_')]/tr")
 
